@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Gabriel Posillo">
+    <title>Pay Calculator</title>
+</head>
+
+<body>
+
+    <h1>Pay Calculator</h1>
+    <p>Hit refresh to calculate a new pay period</p>
+
+    <script>
+        //Gather necessary values//
+        var payrate = Number(prompt("Enter your hourly pay rate: "))
+        var hours = Number(prompt("Enter the number of hours you worked in a week: "))
+        var taxrate = .20
+
+        //Calculate totals//
+        var weekly = payrate * hours
+        var gross = weekly * 2
+        var tax = gross * taxrate
+        var net = gross - tax 
+
+        //Output totals to user and log to console//
+        alert(`Gross pay: ${gross.toFixed(2)}\nUncle Sam's Share: ${tax.toFixed(2)}\nNet Pay: ${net.toFixed(2)}`)
+        console.log(`Gross pay: ${gross.toFixed(2)}`)
+        console.log(`Uncle Sam's Share: ${tax.toFixed(2)}`)
+        console.log(`Net Pay: ${net.toFixed(2)}`)
+
+
+       
+
+    </script>
+    
+</body>
+
+
+</html>
