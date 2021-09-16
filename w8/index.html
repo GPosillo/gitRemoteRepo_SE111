@@ -37,8 +37,8 @@
 	
 		//Store the elements (tags) in variables
 		
-		var fname = document.querySelector(`first name, #first`).value
-		var lname = document.querySelector(`last name, #last`).value
+		var fname = document.querySelector(`first`)
+		var lname = document.querySelector(`last`)
 
 		
 
@@ -73,8 +73,8 @@
 				//2. last: will be a string that uses the last Input's value
 
             var person = {
-				first: `${fname}`,
-				last: `${lname}`
+				first: `fname`,
+				last: `lname`
 
 
             }//end of person object
@@ -83,7 +83,7 @@
 
 
 			//Add the person object into the people array by using the .push() array method.
-			people.push(`${person}`)
+			people.push(person)
 
 			//Bubble sort people on the last name
 			for(let i=0; i < people.length-1; i++)
@@ -131,7 +131,7 @@
 				//log the output string
 				console.log(output)
 				//replace the outputDiv's inner HTML with the output string
-				output.innerHTML += `${output}`
+				output.innerHTML += output
 
 
 
