@@ -37,10 +37,12 @@
 	
 		//Store the elements (tags) in variables
 		
-		var fname = document.querySelector(`first`)
-		var lname = document.querySelector(`last`)
+		var fname = document.querySelector(`#first`)
+		var lname = document.querySelector(`#last`)
 
 		
+		console.log(fname)
+		console.log(lname)
 
 		//Make an array to store the people
 
@@ -73,13 +75,14 @@
 				//2. last: will be a string that uses the last Input's value
 
             var person = {
-				first: `fname`,
-				last: `lname`
+				first: (fname).value,
+				last: (lname).value
 
 
             }//end of person object
 
-
+			console.log(person.first)
+			console.log(person.last)
 
 
 			//Add the person object into the people array by using the .push() array method.
@@ -103,7 +106,7 @@
 			console.log(people)
 
 			//create a variable called 'output' that has an empty string value stored to 
-			var output = document.querySelector(`#output`)
+			var output = ""
 			
 
 			//Loop through the objects in the people array
@@ -131,7 +134,7 @@
 				//log the output string
 				console.log(output)
 				//replace the outputDiv's inner HTML with the output string
-				output.innerHTML += output
+				output.innerHTML += `output`
 
 
 
